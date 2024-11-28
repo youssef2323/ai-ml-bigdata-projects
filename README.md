@@ -10,7 +10,7 @@ This repository showcases projects at the intersection of Artificial Intelligenc
 
 1. [Bangalore House Price Prediction App](./Bangalore_House_price_prediction_app)
    - Predict house prices in Bangalore using regression models and Flask.
-2. [COVID-19 Real-Time Analysis](./Covid_Real_Time_Analysis)
+2. [COVID-19 Real-Time Analysis](./covid-19-real-time-analysis)
    - Build a real-time big data pipeline for COVID-19 insights using Spark, Kafka, PySpark, and machine learning.
    
 3. [Song Similarity App](./Song_similarity_app)
