@@ -8,15 +8,13 @@ This repository contains a collection of my projects showcasing the power of Art
 
 ## Table of Contents
 
-1. [Bangalore House Price Prediction App](./Bangalore_House_Price_Prediction)
+1. [Bangalore House Price Prediction App](./Bangalore_House_price_prediction_app)
    - Predict house prices in Bangalore using regression models and Flask.
-2. [COVID-19 Real-Time Analysis](./Covid_Real_Time_Analysis)
-   - Build a real-time big data pipeline for COVID-19 insights using Spark and Kafka.
-3. [Song Similarity App](./Song_Similarity_App)
+2. [Song Similarity App](./Song_similarity_app)
    - Determine song lyric similarity with NLP and Federated Learning.
-4. [Car Price Prediction App](./Car_Price_Prediction)
+3. [Car Price Prediction App](./Car_price_prediction_app)
    - Predict car prices using regression models with feature engineering.
-5. [German Traffic Sign Classification App](./Traffic_Sign_Classifier)
+4. [German Traffic Sign Classification App](./German_traffic_sign_recognition_app)
    - Classify traffic signs using CNNs and ANNs for high accuracy.
 
 ---
@@ -27,7 +25,6 @@ This repository contains a collection of my projects showcasing the power of Art
 - **Libraries**:
   - Pandas, NumPy, Scikit-learn, Matplotlib
   - TensorFlow, PyTorch
-  - Apache Spark, Kafka
 - **Deployment**: Flask
 - **Database**: MySQL, phpMyAdmin
 
