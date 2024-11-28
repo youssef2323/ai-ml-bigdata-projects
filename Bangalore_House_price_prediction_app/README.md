@@ -1,9 +1,6 @@
 
 
-
-
-![Screenshot (227)](https://github.com/youssef665/Machine-learning-projects/assets/110295462/384d5bf7-582a-4ce5-9c72-199a1f4db989)
-
+![Screenshot (247)](https://github.com/user-attachments/assets/79560d90-0f18-4025-9d0b-2a319677f410)
 
 
 This data science project series walks through step by step process of how
