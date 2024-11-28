@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Similar Songs Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Similar Songs</h1>
+        <ul class="results-list">
+            {% for artist, title, score in similar_songs %}
+            <li>{{ artist }} - {{ title }} (Similarity: {{ '%.2f' % (score * 100) }}%)</li>
+            {% endfor %}
+        </ul>
+        <a href="/" class="button">New Search</a>
+    </div>
+</body>
+</html>

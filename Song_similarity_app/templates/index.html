@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Similarity Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Song Similarity Finder</h1>
+        <form action="/" method="post">
+            <textarea id="lyrics" name="lyrics" placeholder="Enter lyrics here..." rows="4" cols="50"></textarea>
+            <button type="submit">Find Similar Songs</button>
+        </form>
+    </div>
+</body>
+</html>

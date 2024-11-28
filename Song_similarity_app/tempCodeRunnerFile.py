@@ -1,0 +1,1 @@
+print(df4["Lyric_Embedding"].iloc[0].shape)
