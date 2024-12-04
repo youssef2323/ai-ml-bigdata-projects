@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Processing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Image Processing with Flask</h1>
+
+        <!-- Upload Image Form -->
+        <form action="/upload" method="POST" enctype="multipart/form-data" class="upload-form">
+            <h2>Upload an Image</h2>
+        
+            <!-- Custom file input -->
+            <div class="file-input-container">
+                <input type="file" name="image" id="image" accept="image/*" required>
+                <label for="image" class="file-label">Choose Image</label>
+                <span id="file-name">No file chosen</span>
+            </div>
+        
+            <!-- Image preview -->
+            <div id="image-preview-container" class="image-preview-container">
+                <img id="image-preview" src="#" alt="Image Preview" style="display:none;">
+            </div>
+        
+            <!-- Submit Button -->
+            <button type="submit" class="upload-button">Upload Image</button>
+        </form>
+
+        <!-- Show Uploaded Image and Processed Images -->
+        {% if show_uploaded %}
+            <div class="image-comparison-container">
+                <div class="image-container">
+                    <h3>Original Image:</h3>
+                    <img src="{{ url_for('static', filename='uploads/' + original_image) }}" alt="Uploaded Image" class="image">
+                </div>
+                
+                <div class="image-container">
+                    <h3>Processed Image:</h3>
+                    {% if processed_image %}
+                        <img src="{{ url_for('static', filename='processed_images/' + processed_image) }}" alt="Processed Image" class="image">
+                    {% else %}
+                        <p>No processed image yet. Choose a processing option below.</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Processing Options -->
+            <h3>Apply Processing:</h3>
+            <div class="button-container">
+                <button onclick="window.location.href='/process/grayscale/{{ original_image }}'">Grayscale</button>
+            <button onclick="window.location.href='/process/threshold/{{ original_image }}'">Threshold</button>
+            <button onclick="window.location.href='/process/simple_halftoning/{{ original_image }}'">Simple Halftoning</button>
+            <button onclick="window.location.href='/process/advanced_halftoning/{{ original_image }}'">Advanced Halftoning</button>
+            <button onclick="window.location.href='/process/halftoning/{{ original_image }}'">Halftoning (Simple + Advanced)</button>
+            <button onclick="window.location.href='/process/histogram/{{ original_image }}'">Histogram</button>
+            <button onclick="window.location.href='/process/histogram_equalization/{{ original_image }}'">Histogram Equalization</button>
+            <button onclick="window.location.href='/process/sobel_operator/{{ original_image }}'">Sobel Edge Detection</button>
+            <button onclick="window.location.href='/process/prewitt_operator/{{ original_image }}'">Perwitt Edge Detection</button>
+            <button onclick="window.location.href='/process/kirsch_compass_masks/{{ original_image }}'">Kirsch Edge Detection</button>
+            <button onclick="window.location.href='/process/Edge_Detection/{{ original_image }}'">Edge detection (ALL)</button>
+            <button onclick="window.location.href='/process/homogeneity_operator/{{ original_image }}'">homogeneity operator</button>
+            <button onclick="window.location.href='/process/difference_operator/{{ original_image }}'">difference operator</button>
+            <button onclick="window.location.href='/process/difference_of_guassians/{{ original_image }}'">difference of guassians</button>
+            <button onclick="window.location.href='/process/contrast_based_edge_detection_with_edge_detector/{{ original_image }}'">contrast based edge detector</button>
+            <button onclick="window.location.href='/process/variance_edge_detector/{{ original_image }}'">variance</button>
+            <button onclick="window.location.href='/process/range_edge_detector/{{ original_image }}'">range</button>
+            <button onclick="window.location.href='/process/Advanced_Edge_Detection/{{ original_image }}'">Advanced Edge Detectoion</button>
+            <button onclick="window.location.href='/process/high_pass_filter/{{ original_image }}'">high pass filter</button>
+            <button onclick="window.location.href='/process/low_pass_filter/{{ original_image }}'">low pass filter</button>
+            <button onclick="window.location.href='/process/median_filter/{{ original_image }}'">median filter</button>
+            <button onclick="window.location.href='/process/Filtering/{{ original_image }}'">Filterall</button>
+            <button onclick="window.location.href='/process/add_imagess/{{ original_image }}'">add images</button>
+            <button onclick="window.location.href='/process/subtract_imagess/{{ original_image }}'">subtract images</button>
+            <button onclick="window.location.href='/process/invert_image/{{ original_image }}'">invert image</button>
+            <button onclick="window.location.href='/process/Operations/{{ original_image }}'">OPerations(ALL)</button>
+            <button onclick="window.location.href='/process/manual_histogram_segmentation/{{ original_image }}'">manual histogram segmentation</button>
+            <button onclick="window.location.href='/process/histogram_peak_thresholding/{{ original_image }}'">histogram peak thresholding</button>
+            <button onclick="window.location.href='/process/valley_based_segmentation/{{ original_image }}'">valley based segmentation</button>
+            <button onclick="window.location.href='/process/adaptive_histogram_segmentation/{{ original_image }}'">adaptive histogram segmentation</button>
+            <button onclick="window.location.href='/process/Segmenetation/{{ original_image }}'">Segmenetation(ALL)</button>
+                <!-- Add more processing buttons here -->
+            </div>
+        {% endif %}
+
+       
+
+        {% if simple_halftoned_image %}
+            <h3>Simple Halftoned Image:</h3>
+            <img src="{{ url_for('static', filename='processed_images/' + simple_halftoned_image) }}" alt="Simple Halftoned Image" class="image">
+        {% endif %}
+
+        {% if advanced_halftoned_image %}
+            <h3>Advanced Halftoned Image:</h3>
+            <img src="{{ url_for('static', filename='processed_images/' + advanced_halftoned_image) }}" alt="Advanced Halftoned Image" class="image">
+        {% endif %}
+        
+        {% if sobel_image %}
+    <h3>Sobel:</h3>
+    <img src="{{ url_for('static', filename='processed_images/' + sobel_image) }}" alt="Sobel Image" class="image">
+{% endif %}
+
+{% if perwitt_image %}
+    <h3>Perwitt:</h3>
+    <img src="{{ url_for('static', filename='processed_images/' + perwitt_image) }}" alt="Perwitt Image" class="image">
+{% endif %}
+
+{% if kirsch_image %}
+    <h3>Kirsch:</h3>
+    <img src="{{ url_for('static', filename='processed_images/' + kirsch_image) }}" alt="Kirsch Image" class="image">
+{% endif %}
+
+
+
+
+
+
+
+
+{% if homog_image %}
+    <h3>homog image:</h3>
+    <img src="{{ url_for('static', filename='processed_images/' + homog_image) }}" alt="homog image" class="image">
+{% endif %}
+{% if diff_image %}
+    <h3>diff image:</h3>
+    <img src="{{ url_for('static', filename='processed_images/' + diff_image) }}" alt="diff image" class="image">
+{% endif %}
+{% if dog_image %}
+    <h3>dog image:</h3>
+    <img src="{{ url_for('static', filename='processed_images/' + dog_image) }}" alt="dog image" class="image">
+{% endif %}
+{% if contrast_image %}
+    <h3>contrast image:</h3>
+    <img src="{{ url_for('static', filename='processed_images/' + contrast_image) }}" alt="contrast image" class="image">
+{% endif %}
+{% if var_image %}
+    <h3>var image:</h3>
+    <img src="{{ url_for('static', filename='processed_images/' + var_image) }}" alt="var image" class="image">
+{% endif %}
+
+{% if rang_image %}
+    <h3>rang image:</h3>
+    <img src="{{ url_for('static', filename='processed_images/' + rang_image) }}" alt="rang image" class="image">
+{% endif %}
+
+{% if high_image %}
+    <h3>high image:</h3>
+    <img src="{{ url_for('static', filename='processed_images/' + high_image) }}" alt="high image" class="image">
+{% endif %}
+{% if low_image %}
+    <h3>low image:</h3>
+    <img src="{{ url_for('static', filename='processed_images/' + low_image) }}" alt="low image" class="image">
+{% endif %}
+{% if median_image %}
+    <h3>median image:</h3>
+    <img src="{{ url_for('static', filename='processed_images/' + median_image) }}" alt="median image" class="image">
+{% endif %}
+
+{% if add_image %}
+    <h3>add image:</h3>
+    <img src="{{ url_for('static', filename='processed_images/' + add_image) }}" alt="add image" class="image">
+{% endif %}
+
+{% if sub_image %}
+    <h3>sub image:</h3>
+    <img src="{{ url_for('static', filename='processed_images/' + sub_image) }}" alt="sub image" class="image">
+{% endif %}
+
+{% if inv_image %}
+    <h3>inv image:</h3>
+    <img src="{{ url_for('static', filename='processed_images/' + inv_image) }}" alt="inv image" class="image">
+{% endif %}
+
+
+
+
+
+
+{% if manual_image %}
+    <h3>manual image:</h3>
+    <img src="{{ url_for('static', filename='processed_images/' + manual_image) }}" alt="manual image" class="image">
+{% endif %}
+
+{% if peak_image %}
+    <h3>peak image:</h3>
+    <img src="{{ url_for('static', filename='processed_images/' + peak_image) }}" alt="peak image" class="image">
+{% endif %}
+
+{% if valley_image %}
+    <h3>valley image:</h3>
+    <img src="{{ url_for('static', filename='processed_images/' + valley_image) }}" alt="valley image" class="image">
+{% endif %}
+
+{% if first_pass_segmentation %}
+<h3>First Pass Segmentation:</h3>
+<img src="{{ url_for('static', filename='processed_images/' + first_pass_segmentation) }}" alt="First Pass Segmentation" class="image">
+{% endif %}
+
+{% if final_segmented_image %}
+<h3>Final Segmented Image:</h3>
+<img src="{{ url_for('static', filename='processed_images/' + final_segmented_image) }}" alt="Final Segmented Image" class="image">
+{% endif %}
+
+
+
+
+
+
+
+    </div>
+</body>
+</html>
+
