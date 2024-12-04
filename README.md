@@ -19,6 +19,8 @@ This repository showcases projects at the intersection of Artificial Intelligenc
    - Predict car prices using regression models with feature engineering.
 5. [German Traffic Sign Classification App](./German_traffic_sign_recognition_app)
    - Classify traffic signs using CNNs and ANNs for high accuracy.
+6. [Image Processing App](./ImageProcessingApp)
+   - Classify traffic signs using CNNs and ANNs for high accuracy.
 
 ---
 
@@ -27,11 +29,11 @@ This repository showcases projects at the intersection of Artificial Intelligenc
 - **Languages**: Python
 - **Libraries**:
   - Pandas, NumPy, Scikit-learn, Matplotlib
-  - TensorFlow, PyTorch
+  - TensorFlow, PyTorch,keras
+  - OpenCV, Pillow
   - PySpark (Apache Spark for Python), Kafka
 - **Deployment**: Flask
 - **Database**: MySQL, phpMyAdmin
 
 
----
 
