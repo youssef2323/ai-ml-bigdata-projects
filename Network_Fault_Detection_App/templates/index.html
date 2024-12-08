@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Condition Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>System Condition Predictor</h1>
+        <form action="/predict" method="POST" class="prediction-form">
+            <div class="form-grid">
+                <div class="input-group">
+                    <label for="T01">T01 (Temperature):</label>
+                    <input type="number" step="0.01" name="T01" id="T01" required>
+                </div>
+                <div class="input-group">
+                    <label for="H01">H01 (Humidity):</label>
+                    <input type="number" step="0.01" name="H01" id="H01" required>
+                </div>
+                <div class="input-group">
+                    <label for="T02">T02 (Temperature):</label>
+                    <input type="number" step="0.01" name="T02" id="T02" required>
+                </div>
+                <div class="input-group">
+                    <label for="H02">H02 (Humidity):</label>
+                    <input type="number" step="0.01" name="H02" id="H02" required>
+                </div>
+                <div class="input-group">
+                    <label for="T11">T11 (Temperature):</label>
+                    <input type="number" step="0.01" name="T11" id="T11" required>
+                </div>
+                <div class="input-group">
+                    <label for="H11">H11 (Humidity):</label>
+                    <input type="number" step="0.01" name="H11" id="H11" required>
+                </div>
+                <div class="input-group">
+                    <label for="T12">T12 (Temperature):</label>
+                    <input type="number" step="0.01" name="T12" id="T12" required>
+                </div>
+                <div class="input-group">
+                    <label for="H12">H12 (Humidity):</label>
+                    <input type="number" step="0.01" name="H12" id="H12" required>
+                </div>
+                <div class="input-group">
+                    <label for="T21">T21 (Temperature):</label>
+                    <input type="number" step="0.01" name="T21" id="T21" required>
+                </div>
+                <div class="input-group">
+                    <label for="H21">H21 (Humidity):</label>
+                    <input type="number" step="0.01" name="H21" id="H21" required>
+                </div>
+                <div class="input-group">
+                    <label for="T22">T22 (Temperature):</label>
+                    <input type="number" step="0.01" name="T22" id="T22" required>
+                </div>
+                <div class="input-group">
+                    <label for="H22">H22 (Humidity):</label>
+                    <input type="number" step="0.01" name="H22" id="H22" required>
+                </div>
+            </div>
+            <div class="submit-container">
+                <input type="submit" value="Predict System Condition" class="submit-btn">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
