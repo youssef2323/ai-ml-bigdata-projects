@@ -1,9 +1,9 @@
 # German Traffic Sign Recognition Project
 This project aims to recognize German traffic signs using Artificial Neural Networks (ANN) and Convolutional Neural Networks (CNN).
 
-![Screenshot (289)](https://github.com/youssef665/AI-ML-projects/assets/110295462/5a63097a-fa44-4b02-9b2a-ca36496bab03)<br>
-![Screenshot (294)](https://github.com/youssef665/AI-ML-projects/assets/110295462/d253ae08-9c70-4fa6-9f1b-2aa3202e39dc)<br>
-![Screenshot (290)](https://github.com/youssef665/AI-ML-projects/assets/110295462/23c374e4-266e-46b2-8f7f-e4f2104b87e2)<br>
+![Screenshot (289)](./Screenshots/screenshot(1).png)<br>
+![Screenshot (289)](./Screenshots/screenshot(2).png)<br>
+![Screenshot (289)](./Screenshots/screenshot(3).png)<br>
 
 
 
