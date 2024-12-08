@@ -21,7 +21,7 @@ This repository showcases projects at the intersection of Artificial Intelligenc
    - Classify traffic signs using CNNs and ANNs for high accuracy.
 6. [Image Processing App](./ImageProcessingApp)
    - Classify traffic signs using CNNs and ANNs for high accuracy.
-7.[Network Fault Detection App](./Network_Fault_Detection_App)
+7. [Network Fault Detection App](./Network_Fault_Detection_App)
    - Detect network faults in real time using LSTM models and Flask-based user interface.
 ---
 
