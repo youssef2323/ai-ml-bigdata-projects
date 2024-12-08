@@ -4,6 +4,23 @@ A Flask-based web application designed to predict network faults using a state-o
 
 ---
 
+---
+
+## Screenshots
+
+### Input Form
+The main page allows users to input sensor readings.
+![Input Form Screenshot](./Screenshots/Screenshot_(489).png)
+![Input Form Screenshot](./Screenshots/Screenshot_(487).png)
+![Input Form Screenshot](./Screenshots/Screenshot_(491).png)
+
+### Prediction Result
+Displays whether the network is "Normal" or "Faulty" based on the input.
+![Prediction Result Screenshot](./Screenshots/Screenshot_(488).png)
+![Prediction Result Screenshot](./Screenshots/Screenshot_(490).png)
+
+---
+
 ## Features
 
 - **Accurate Fault Detection**: Predicts network faults with a high degree of accuracy.
@@ -20,23 +37,6 @@ A Flask-based web application designed to predict network faults using a state-o
 2. **Prediction**: The LSTM model processes the data and predicts whether the network is "Normal" or "Faulty."
 3. **Results**: The prediction result is displayed instantly on the result page.
 
----
-
-## Screenshots
-
-### Input Form
-The main page allows users to input sensor readings.
-![Input Form Screenshot](screenshots/input_form.png)
-
-### Prediction Result
-Displays whether the network is "Normal" or "Faulty" based on the input.
-![Prediction Result Screenshot](screenshots/prediction_result.png)
-
-### Error Handling
-Provides clear feedback for invalid inputs or prediction errors.
-![Error Page Screenshot](screenshots/error_page.png)
-
----
 
 ## Technologies Used
 
