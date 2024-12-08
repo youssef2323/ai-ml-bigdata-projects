@@ -50,20 +50,6 @@ Provides clear feedback for invalid inputs or prediction errors.
   - NumPy
   - Pandas
 - **Visualization**:
-  - Matplotlib (if applicable)
+  - Matplotlib 
 
----
 
-## Setup Instructions
-
-### Prerequisites
-
-- Python 3.8+
-- Pip (Python package manager)
-
-### Installation
-
-1. **Clone the Repository**:
-   ```bash
-   git clone <repository-link>
-   cd <repository-folder>
