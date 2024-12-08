@@ -25,16 +25,17 @@ This repository showcases projects at the intersection of Artificial Intelligenc
    - Detect network faults in real time using LSTM models and Flask-based user interface.
 ---
 
-## Technologies Used
-
-- **Languages**: Python
-- **Libraries**:
-  - Pandas, NumPy, Scikit-learn, Matplotlib
-  - TensorFlow, PyTorch,keras
-  - OpenCV, Pillow
-  - PySpark (Apache Spark for Python), Kafka
-- **Deployment**: Flask
-- **Database**: MySQL, phpMyAdmin
+Technologies Used
+Languages: Python
+Libraries:
+Data Manipulation: Pandas, NumPy
+Machine Learning: Scikit-learn, TensorFlow, Keras, PyTorch
+Visualization: Matplotlib
+Big Data Processing: PySpark (Apache Spark for Python), Kafka
+Computer Vision: OpenCV, Pillow
+Deployment: Flask (Web Framework)
+Database: MySQL, phpMyAdmin
+Frontend Technologies: HTML, CSS, JavaScript
 
 
 
