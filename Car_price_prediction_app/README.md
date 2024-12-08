@@ -1,7 +1,8 @@
 # Car Price Prediction Project
 This project aims to predict car prices using various regression models including Linear SVR, Decision Tree, and Gradient Boosting. The project also includes a Flask server to serve the predictive model as a web application.
-![Screenshot (295)](./Screenshots/screenshot(1))<br>
-![Screenshot (295)](./Screenshots/screenshot(2))<br>
+![Screenshot (295)](./Screenshots/screenshot(1).png)<br>
+![Screenshot (295)](./Screenshots/screenshot(2).png
+)<br>
 
 
 ## Description
